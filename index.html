@@ -79,6 +79,26 @@
 .tailor-bottom{display:flex;justify-content:space-between;align-items:center;gap:8px;color:#826c6b;font:700 7px var(--display);letter-spacing:1px}
 .tailor-bottom strong{color:#7a4b55}
 
+
+/* Professional certification and training cards */
+.certifications-section{background:#f7f6f2}
+.certifications-heading{margin-bottom:35px}
+.certifications-heading p{max-width:410px}
+.certification-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.certification-card{display:flex;flex-direction:column;gap:0;background:#fff;border:1px solid #e0e5dc;border-radius:12px;padding:28px 29px 30px;min-width:0;box-shadow:0 7px 20px rgba(26,46,33,.025)}
+.certification-card-top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:29px}
+.certification-mark{width:54px;height:54px;display:grid;place-items:center;background:#e4efd6;color:#46673d;font:700 24px var(--display);border-radius:10px}
+.certification-card:nth-child(2) .certification-mark{background:#e1e8eb;color:#3b606d}
+.certification-number{color:#839184;font:700 10px var(--display);letter-spacing:1.7px}
+.certification-type{font:700 9px var(--display);color:#728667;letter-spacing:1.2px;margin-bottom:12px}
+.certification-card h3{font:700 clamp(20px,2.1vw,26px)/1.22 var(--display);letter-spacing:-1px;margin:0 0 14px;max-width:480px}
+.certification-issuer{display:flex;gap:8px;align-items:center;flex-wrap:wrap;color:#4d5a52;font:700 12px var(--display);margin-bottom:16px}
+.certification-issuer span{color:#a9b5a9}
+.certification-card p{color:#69756c;font-size:12.5px;line-height:1.85;margin-bottom:21px}
+.certification-card .tag-list{margin-top:auto}
+.certification-id{margin-top:22px;color:#7b897c;font:600 10px var(--display);letter-spacing:.5px}
+@media(max-width:700px){.certification-grid{grid-template-columns:1fr;gap:16px}.certification-card{padding:25px 24px}.certification-card-top{margin-bottom:19px}.certification-card h3{font-size:22px}}
+
 </style>
   <script>
 /**
@@ -108,6 +128,7 @@ window.PORTFOLIO_CONFIG = {
       <nav class="desktop-nav" aria-label="Primary navigation">
         <a href="#work">Projects</a>
         <a href="#expertise">Expertise</a>
+        <a href="#certifications">Certifications</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -119,6 +140,7 @@ window.PORTFOLIO_CONFIG = {
     <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation" hidden>
       <a href="#work">Projects</a>
       <a href="#expertise">Expertise</a>
+      <a href="#certifications">Certifications</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -184,9 +206,47 @@ window.PORTFOLIO_CONFIG = {
 
     <section class="section expertise-section" id="expertise" aria-labelledby="expertise-title"><div class="container"><div class="section-heading expertise-heading"><div class="section-label"><span>02</span> / WHAT I BRING</div><h2 id="expertise-title">Built on fundamentals.<br><em>Driven by curiosity.</em></h2><p>Backend first, but always mindful of the entire product lifecycle—from a database constraint to the user's final click.</p></div><div class="expertise-grid"><article class="expertise-card"><span class="expertise-number">01 / CORE STRENGTH</span><div class="expertise-icon" aria-hidden="true">{ }</div><h3>Backend & APIs</h3><p>Maintainable services, authorization, business rules, and API design that makes complexity manageable.</p><div class="skill-chips"><span>PHP</span><span>Laravel</span><span>REST APIs</span><span>RBAC</span><span>Queues</span></div></article><article class="expertise-card"><span class="expertise-number">02 / UNDER THE HOOD</span><div class="expertise-icon" aria-hidden="true">▤</div><h3>Data & Reliability</h3><p>Schema design, efficient queries, transactional consistency, observability, and dependable system behavior.</p><div class="skill-chips"><span>MySQL</span><span>PostgreSQL</span><span>SQL</span><span>Redis</span><span>Testing</span></div></article><article class="expertise-card"><span class="expertise-number">03 / DELIVERY MINDSET</span><div class="expertise-icon" aria-hidden="true">↗</div><h3>DevOps & Cloud</h3><p>Practical deployments and a growing infrastructure toolkit for repeatable, more confident releases.</p><div class="skill-chips"><span>Docker</span><span>Linux</span><span>AWS</span><span>Terraform</span><span>CI/CD</span></div></article><article class="expertise-card"><span class="expertise-number">04 / THE FULL PICTURE</span><div class="expertise-icon" aria-hidden="true">◫</div><h3>Frontend & Product</h3><p>UI delivery, cross-functional collaboration, production support, and translating real requirements into features.</p><div class="skill-chips"><span>JavaScript</span><span>React</span><span>Bootstrap</span><span>Git</span><span>Agile Delivery</span></div></article></div></div></section>
 
-    <section class="section about-section" id="about" aria-labelledby="about-title"><div class="container about-layout"><div class="about-aside"><div class="section-label"><span>03</span> / THE PERSON</div><div class="about-monogram" aria-hidden="true"><span>AH<span>↗</span></span></div><span class="about-caption">CURIOUS BY DEFAULT. PRACTICAL BY DESIGN.</span></div><div class="about-copy"><h2 id="about-title">More than<br><em>the code.</em></h2><p class="about-intro">I'm Ahasanul Hoque, a software engineer at Centre for Development Innovation and Practices (CDIP), where I work on real-world systems that support teams and operations.</p><p>I care about making software <strong>clearer, safer, and easier to maintain</strong>. My days often span backend development, frontend implementation, troubleshooting production issues, and collaborating to turn requirements into working features.</p><p>I'm continually expanding into system design, automated testing, cloud infrastructure, and DevOps. Away from the keyboard, you'll sometimes find me playing guitar.</p><div class="timeline"><div class="timeline-item"><span class="timeline-date">2023</span><div><strong>B.Sc. in Computer Science & Engineering</strong><span>Green University of Bangladesh</span></div></div><div class="timeline-item"><span class="timeline-date">2024 — NOW</span><div><strong>Software Engineer · CDIP</strong><span>Backend engineering, internal systems, product delivery & production support</span></div></div><div class="timeline-item"><span class="timeline-date">NEXT</span><div><strong>Building toward larger systems</strong><span>Cloud, architecture, testing, security & international collaboration</span></div></div></div></div></div></section>
 
-    <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="container contact-content"><div class="section-label contact-label"><span>04</span> / LET'S TALK</div><div class="contact-grid"><div><h2 id="contact-title">Good systems start<br>with a <em>conversation.</em></h2><p>Working on a meaningful product, a backend challenge, or an engineering team? I'm always interested in a good technical conversation.</p><a class="button button-light" id="primary-contact" href="https://www.upwork.com/freelancers/~0123205bc0c6736f0b" target="_blank" rel="noopener noreferrer">Connect on Upwork <span aria-hidden="true">↗</span></a></div><div class="contact-side"><div class="contact-side-title">FIND ME ONLINE</div><div id="contact-links"><a href="https://www.upwork.com/freelancers/~0123205bc0c6736f0b" target="_blank" rel="noopener noreferrer">Upwork <span aria-hidden="true">↗</span></a></div><div class="contact-side-caption">Have another way to reach me in mind? Configure additional links in <code>site.config.js</code>.</div></div></div><div class="contact-bottom"><span>© <span id="year">2026</span> Ahasanul Hoque</span><span>BUILT WITH INTENTION, NOT JUST INSTRUCTIONS.</span><a href="#top">Back to top ↑</a></div></div></section>
+    <section class="section certifications-section" id="certifications" aria-labelledby="certifications-title">
+      <div class="container">
+        <div class="section-heading two-column-heading certifications-heading">
+          <div>
+            <div class="section-label"><span>03</span> / CERTIFICATIONS &amp; TRAINING</div>
+            <h2 id="certifications-title">Learning, applied<br>to <em>real systems.</em></h2>
+          </div>
+          <p>Formal training in cloud and DevOps engineering, alongside information security auditing fundamentals.</p>
+        </div>
+        <div class="certification-grid">
+          <article class="certification-card">
+            <div class="certification-card-top">
+              <div class="certification-mark" aria-hidden="true">☁</div>
+              <span class="certification-number">01 / CLOUD &amp; DEVOPS</span>
+            </div>
+            <div class="certification-type">COURSE COMPLETION CERTIFICATE</div>
+            <h3>Mastering DevOps: From Fundamentals to Advanced</h3>
+            <div class="certification-issuer">Ostad <span aria-hidden="true">·</span> October 2026</div>
+            <p>Practical DevOps training covering cloud infrastructure, deployment workflows, containerization, infrastructure as code, and automation.</p>
+            <div class="tag-list"><span>AWS</span><span>Docker</span><span>Kubernetes</span><span>CI/CD</span></div>
+            <div class="certification-id">Certificate ID: C48858</div>
+          </article>
+          <article class="certification-card">
+            <div class="certification-card-top">
+              <div class="certification-mark" aria-hidden="true">◇</div>
+              <span class="certification-number">02 / INFORMATION SECURITY</span>
+            </div>
+            <div class="certification-type">PROFESSIONAL TRAINING</div>
+            <h3>ISO 27001 ISMS Internal Auditor Training</h3>
+            <div class="certification-issuer">TÜV India Training Academy <span aria-hidden="true">·</span> June 2026</div>
+            <p>Training in information security management system principles, internal audit processes, and ISO/IEC 27001-based governance and controls.</p>
+            <div class="tag-list"><span>ISO/IEC 27001</span><span>ISMS</span><span>Internal Audit</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about" aria-labelledby="about-title"><div class="container about-layout"><div class="about-aside"><div class="section-label"><span>04</span> / THE PERSON</div><div class="about-monogram" aria-hidden="true"><span>AH<span>↗</span></span></div><span class="about-caption">CURIOUS BY DEFAULT. PRACTICAL BY DESIGN.</span></div><div class="about-copy"><h2 id="about-title">More than<br><em>the code.</em></h2><p class="about-intro">I'm Ahasanul Hoque, a software engineer at Centre for Development Innovation and Practices (CDIP), where I work on real-world systems that support teams and operations.</p><p>I care about making software <strong>clearer, safer, and easier to maintain</strong>. My days often span backend development, frontend implementation, troubleshooting production issues, and collaborating to turn requirements into working features.</p><p>I'm continually expanding into system design, automated testing, cloud infrastructure, and DevOps. Away from the keyboard, you'll sometimes find me playing guitar.</p><div class="timeline"><div class="timeline-item"><span class="timeline-date">2023</span><div><strong>B.Sc. in Computer Science & Engineering</strong><span>Green University of Bangladesh</span></div></div><div class="timeline-item"><span class="timeline-date">2024 — NOW</span><div><strong>Software Engineer · CDIP</strong><span>Backend engineering, internal systems, product delivery & production support</span></div></div><div class="timeline-item"><span class="timeline-date">NEXT</span><div><strong>Building toward larger systems</strong><span>Cloud, architecture, testing, security & international collaboration</span></div></div></div></div></div></section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="container contact-content"><div class="section-label contact-label"><span>05</span> / LET'S TALK</div><div class="contact-grid"><div><h2 id="contact-title">Good systems start<br>with a <em>conversation.</em></h2><p>Working on a meaningful product, a backend challenge, or an engineering team? I'm always interested in a good technical conversation.</p><a class="button button-light" id="primary-contact" href="https://www.upwork.com/freelancers/~0123205bc0c6736f0b" target="_blank" rel="noopener noreferrer">Connect on Upwork <span aria-hidden="true">↗</span></a></div><div class="contact-side"><div class="contact-side-title">FIND ME ONLINE</div><div id="contact-links"><a href="https://www.upwork.com/freelancers/~0123205bc0c6736f0b" target="_blank" rel="noopener noreferrer">Upwork <span aria-hidden="true">↗</span></a></div><div class="contact-side-caption">Have another way to reach me in mind? Configure additional links in <code>site.config.js</code>.</div></div></div><div class="contact-bottom"><span>© <span id="year">2026</span> Ahasanul Hoque</span><span>BUILT WITH INTENTION, NOT JUST INSTRUCTIONS.</span><a href="#top">Back to top ↑</a></div></div></section>
   </main>
 <script>
 (() => {
